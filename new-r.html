@@ -1,0 +1,534 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SMARTRAJ - Dashboard</title>
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<!-- <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+ --><meta name="FORMAT" content="application/json">
+<meta name="CHARSET" content="UTF-8">
+<meta name="DOCUMENTLANGUAGECODE" content="en">
+<meta name="DOCUMENTCOUNTRYCODE" content="us">
+<meta name="DC.LANGUAGE" scheme="rfc1766" content="en-us">
+<meta name="COPYRIGHT" content="Copyright (c) 2016 for Mars Telecom Systems Pvt Ltd">
+<meta name="SECURITY" content="Public">
+<meta name="ROBOTS" content="index,follow">
+<meta name="GOOGLEBOT" content="index,follow">
+<meta name="Author" content="Mars Telecom Systems Private Ltd">
+<meta name="REFERER" content="ORIGIN">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/styles.css">
+<script type="text/javascript" language="javascript" src="./SMARTRAJ - Dashboard_files/utils.js.download"></script>
+<script type="text/javascript" src="./SMARTRAJ - Dashboard_files/jquery-3.2.1.js.download"></script>
+<script type="text/javascript" src="./SMARTRAJ - Dashboard_files/bootstrap.min.js.download"></script>
+<script type="text/javascript" src="./SMARTRAJ - Dashboard_files/jquery-ui-1.8.2.custom.min.js.download"></script>
+<script type="text/javascript" src="./SMARTRAJ - Dashboard_files/jquery.uploadify.v2.1.0.min.js.download"></script>
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/bootstrap.min.css">
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/demos.css">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/ui.core.css">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/ui.theme.css">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/ui.tabs.css">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/ui.dialog.css">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/ui.autocomplete.css">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/smartRajDashboard.css">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/dashboardSideNav.css">
+<link href="css/style.css" rel="stylesheet">
+<script src="./SMARTRAJ - Dashboard_files/engine.js.download"></script>
+<script src="./SMARTRAJ - Dashboard_files/util.js.download"></script>
+<script type="text/javascript" src="./SMARTRAJ - Dashboard_files/CommonServiceDWR.js.download"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+.mySlides {display:none;}
+.mySlides1 {display:none;}
+.mySlides2 {display:none;}
+
+
+#b {
+text-decoration:none;
+}
+#b:hover {
+color: red;
+}
+
+#content2{
+height:150px;
+width: 100%;
+background-image: url("");
+background-repeat: no-repeat;
+background-size:cover;
+}
+
+#content{
+height:300px;
+width: 100%;
+background-color:white;
+background-image: url("SMARTRAJ%20-%20Dashboard_files/camel.png");
+background-repeat: no-repeat;
+background-size:cover;
+}
+
+#content1{
+height:300px;
+width: 100%;
+background-image: url("SMARTRAJ%20-%20Dashboard_files/bg.jpg");
+background-repeat: no-repeat;
+background-size:cover;
+}
+
+.topbar{
+float:right;
+margin: 6px 10px 0px 0px !important;
+}
+
+<!--
+.button {
+     /* Green */
+    border: none;
+    color: black;
+    padding: 70px;
+   
+    
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    }
+-->
+
+.so{
+overflow-y: auto;
+}
+
+
+.button { 
+     z-index: -1000;
+    background-color:#f2f2f2; 
+	background-image:;
+    border: none;
+    color: black;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius:15px;
+}
+.button span{
+ cursor: pointer;
+ display: inline-block;
+ position: relative;
+ transition: 0.5s;
+ }
+ .button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  }
+ .button:hover span {
+  padding-right: 25px;
+ }
+ .button:hover span:after {
+ opacity: 1;
+ right: 0;
+ }
+ .button1:hover  {
+ background-color: gray;
+ color: white;
+ }
+
+	
+	.flex-container {
+  display:flex ;
+  
+  background-color:;
+}
+
+.flex-container > div {
+  background-color: ;
+  width: 100px;
+  margin: 0px;
+  text-align:center;
+  padding: 10px;
+  font-size: 30px;
+  border-radius:50%;
+}
+
+
+#ac {
+
+
+	background-color: #cccccc;
+    background-image: linear-gradient(#6fff6f,#fbb782);
+}
+
+
+#img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#aa{
+background-color:#ffffff;
+background-image:linear-gradient(#fa4300,#962800);
+}
+
+
+#d{
+
+    background-color: #cccccc;
+    background-image: linear-gradient(#f2f2f2,#f2f2f2);
+}
+
+
+#mySidenav a {
+    position: absolute;
+    height:170px;
+    right: -30px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 80px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 30px 0 0 30px ;
+}
+.vertical-text {
+	float: center;
+}
+.vertical-text {
+	transform: rotate(90deg);
+	transform-origin: right bottom 50;
+}
+#mySidenav a:hover {
+    right: 0;
+}
+
+
+
+
+
+<!--#ac{
+background-color:brown;
+background-image: linear-gradient
+}-->
+
+</style>
+<body>
+<div style="background-color:black">
+<div  class="smt-home" style="background-color:black">
+
+ 
+   <a href="https://www.smartrajapp.urban.rajasthan.gov.in/"><button type="button"  class="topbar button button1"><span><b>Citizen Portal</b></span></button></a>
+    <a href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/home.do"><button type="button" class="topbar button button1"><span><b>Home</b></span></button></a>
+  
+					
+					
+					
+					
+ 
+  
+ 
+ <!--  <a href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/home.do"></a><img src="./SMARTRAJ - Dashboard_files/title.jpg" >-->
+ <div class="main-header clearfix" id="d">
+ <div class="page-title">
+ 					<div class="landingPageLogo"><a href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/home.do"><img src="SMARTRAJ%20-%20Dashboard_files/Logo.png" style="margin-top: 16px"></a> </div>				
+				</div><!-- /page-title -->
+				<ul class="page-stats-left">
+			    	<li style="margin: 0 %">
+			    		<div class="value">			    			
+			    			<b id="currentVisitor" style="font-weight: bold;font-size: 24px" >Government of Rajasthan</b>
+			    			<b style="font-weight: bold;font-size: 20px;text-align: center;">Dept. of Local Self Government</b>
+			    			<b style="font-weight: bold;font-size: 15px;text-align: center;">SmartRaj Dashboard</b>
+			    		</div>						
+			    	</li>
+			    	
+			    </ul>
+				</div>
+				
+</div>
+<!--slideshow--><div style="max-width:100%">
+  <img class="mySlides" src="SMARTRAJ%20-%20Dashboard_files/b0.jpg" style="width:100%;height:300px">
+  <img class="mySlides" src="SMARTRAJ%20-%20Dashboard_files/slide2.jpg" style="width:100%;height:300px">
+  <!--
+  <img class="mySlides" src="SMARTRAJ%20-%20Dashboard_files/udai1.jpg" style="width:100%;height:300px">-->
+  <img class="mySlides" src="SMARTRAJ%20-%20Dashboard_files/udai.jpg" style="width:100%;height:300px">
+</div><!--slideshow-->
+
+<div style="height:4px;background-color:gray"></div>
+<div >
+<div align="left" id="content1" style="height:320px;width:100% ">
+
+<div class="col-sm-2" id="aa" style="height:320px; border-radius: 0 20px 20px 0"></br></br></br></br>
+<img src="SMARTRAJ%20-%20Dashboard_files/statistics.png" width="100px"><p style="text-align:center;font-size:20px;color:white"><b>SmartRaJ Statistics</b></b>
+ </div>
+
+  <div class="col-sm-3"> </br><img src="SMARTRAJ%20-%20Dashboard_files/bai.png" width="100px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/dashboard/totalReportsWise.do"><p style="text-align:center"><b>Basic Applications Information</b></p></a>
+  </br>
+  <img src="SMARTRAJ%20-%20Dashboard_files/ps.png" width="100px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/dashboard/propertySurvey.do"><p style="text-align:center"><b>Survey</b></p></a>
+  </div>
+  <div class="col-sm-3"></br><img src="SMARTRAJ%20-%20Dashboard_files/revenue.png" width="100px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/revenueChart/revenueChart.do"><p style="text-align:center"><b>Revenue </b></p></a>
+</br> 
+ <img src="SMARTRAJ%20-%20Dashboard_files/kyt.png" width="100px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/dashboard/propertySurveyDetails.do"><p style="text-align:center"><b>Know Your Tax</b></p></a>
+  </div>
+  <div class="col-sm-3"></br><img src="SMARTRAJ%20-%20Dashboard_files/townplanning.png" width="100px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/townPlanning/buildingPermission.do"><p style="text-align:center"><b>Town Planning </b></p></a>
+  </br>
+  <img src="SMARTRAJ%20-%20Dashboard_files/pt.png" width="100px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/dashboard/propertyChangeOfOwnership.do"><p style="text-align:center"><b>Property Transfer </b></p></a>
+  </div>
+ 
+  <div class="col-sm-1" id="" style="height:300px"></div>
+<!--
+<div>
+  <div class="col-sm-3"><img src="SMARTRAJ%20-%20Dashboard_files/ps.png" width="100px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/dashboard/propertySurvey.do"><p style="text-align:center"><b>Survey</b></p></a></div>
+  <div class="col-sm-3"><img src="SMARTRAJ%20-%20Dashboard_files/kyt.png" width="100px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/dashboard/propertySurveyDetails.do"><p style="text-align:center"><b>Know Your Tax</b></p></a></div>
+  <div class="col-sm-3"><img src="SMARTRAJ%20-%20Dashboard_files/pt.png" width="100px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/dashboard/propertyChangeOfOwnership.do"><p style="text-align:center"><b>Property Transfer </b></p></a></div>
+  </div>
+-->
+</div>
+<div style="height:4px;background-color:gray"></div>
+<!--<div align="left" id="content2" style="height:300px;width:100%">
+
+  <div class="col-sm-2" id="aa" style="height:300px"></div>
+  
+  <div class="col-sm-3"> <img src="SMARTRAJ%20-%20Dashboard_files/hawa.png" width="100px"><a id="b" href="https://www.jscljaipur.com/"><p style="text-align:center"><b>Jaipur</b></p></a>
+  
+  <img src="SMARTRAJ%20-%20Dashboard_files/lkota.png" width="100px"><a id="b" href="https://smartcitykota.com/"><p style="text-align:center"><b>Kota</b></p></a>
+  </div>
+  <div class="col-sm-3"><img src="SMARTRAJ%20-%20Dashboard_files/uday1.png" width="100px"><a id="b" href="http://udaipursmartcity.in/"><p style="text-align:center"><b>Udaipur</b></p></a>
+  </br>
+  <img src="SMARTRAJ%20-%20Dashboard_files/nulm.png" width="100px"><a id="b" href="http://urban.rajasthan.gov.in/content/raj/udh/lsg-jaipur/en/schemes/national-urban-livelihoods-mission--nulm-/nulm-.html"><p style="text-align:center"><b>National Urban Livelihood Mission </b></p></a>
+  </div>
+  <div class="col-sm-3"><img  src="SMARTRAJ%20-%20Dashboard_files/mayo.png" width="100px"><a id="b" href="https://smartnet.niua.org/users/ajmer-smart-city-limited"><p style="text-align:center"><b>Ajmer</b></p></a>
+  </br>
+  <img src="SMARTRAJ%20-%20Dashboard_files/sblu.png" width="100px"><a id="b" href="http://www.swachhbharaturban.in/sbm/home/#/Dashboard"><p style="text-align:center"><b>swachh Bharat</b></p></a>
+  </div>
+
+  <div class="col-sm-1" style="height:300px;background-color:black"></div>
+
+</div>
+-->
+
+<div style="background-color:transparent">
+<div class="col-sm-2"  id="aa" style="height:170px; border-radius: 0 20px 20px 0"></br></br>
+<div>
+<img src="SMARTRAJ%20-%20Dashboard_files/l.png" style="height:50px">
+<p style="text-align:center;color:white;font-size:18px"><b>Updates</b></p>
+</div>
+</div>
+<!--slideshow--><div class="col-sm-6" style="max-width:100%">
+<div class=" mySlides2" style="position: relative">
+
+  <div class="col-sm-6" style="height:170px"></br>
+  <img src="SMARTRAJ%20-%20Dashboard_files/hawa.png" style="height:100px">
+ 
+  <a id="b" href="https://www.jscljaipur.com/"><p style="text-align:center"><b>Jaipur</b></p></a>
+  
+  </div>
+  <div class="col-sm-6" style="height:170px"></br>
+  <img id="img1" src="SMARTRAJ%20-%20Dashboard_files/lkota.png" style="height:100px">
+ 
+  <a id="b" href="https://smartcitykota.com/"><p style="text-align:center"><b>Kota</b></p></a>
+  </div>
+  </div>
+  
+  <div class=" mySlides2" style="position: relative">
+ 
+  <div class="col-sm-6" style="height:170px"></br>
+  <img src="SMARTRAJ%20-%20Dashboard_files/uday1.png" style="height:100px">
+  
+ <a id="b" href="http://udaipursmartcity.in/"><p style="text-align:center"><b>Udaipur</b></p></a>
+  </div>
+  
+  <div class="col-sm-6" style="height:170px"></br>
+  <img src="SMARTRAJ%20-%20Dashboard_files/mayo.png" style="height:100px">
+ 
+  <a id="b" href="https://smartnet.niua.org/users/ajmer-smart-city-limited"><p style="text-align:center"><b>Ajmer</b></p></a>
+  </div>
+  </div>
+  
+  
+  </div>
+ </div>
+ 
+  
+  
+  
+  
+  </div><!--slideshow-->
+  
+<div class="col-sm-3" style="height:170px;max-width:100%">
+ <div class=" mySlides1" style="position: relative;height:170px">
+ 
+  </br><img src="SMARTRAJ%20-%20Dashboard_files/nulm.png" style="height:100px">
+  
+<a id="b" href="http://urban.rajasthan.gov.in/content/raj/udh/lsg-jaipur/en/schemes/national-urban-livelihoods-mission--nulm-/nulm-.html"><p style="text-align:center"><b>National Urban Livelihood Mission </b></p></a>   
+ 
+ </div>
+ <div class=" mySlides1" style="position: relative;height:170px">
+
+  </br><img src="SMARTRAJ%20-%20Dashboard_files/sblu.png" style="height:100px">
+ 
+<a id="b" href="http://www.swachhbharaturban.in/sbm/home/#/Dashboard"><p style="text-align:center"><b>swachh Bharat</b></p></a>
+
+ 
+ </div>
+</div>
+<!--<div class="col-sm-1" id="aa" style="height:150px"></div>-->
+
+<div id="mySidenav" class="col-sm-1 sidenav">
+  <a href="#" id="aa" ><b class="vertical-text" style="text-align:center">&nbsp&nbspQuick&nbspAcess</b></a>
+  </div>
+
+
+
+<div class="col-ms-12" id=""  style="height:170px;width:100%;float:right">
+<div style="height:4px;background-color:gray"></div>
+</br>
+
+<div class=" mySlides3" style="position: relative;height:150px">
+
+<div class="col-sm-1"></div>
+  <div class="col-sm-2"> <img src="SMARTRAJ%20-%20Dashboard_files/nulmp.png" width="60px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/nulmDetails/listNULM.do"><p style="text-align:center"><b>National Urban Livelihood Mission </b></p></a></div>	
+  <div class="col-sm-2"> <img src="SMARTRAJ%20-%20Dashboard_files/scm.png" width="60px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/smartcitymission/listSmartCityMission.do"><p style="text-align:center"><b>Smart Cities Mission</b></p></a></div>
+  <div class="col-sm-2" ><img src="SMARTRAJ%20-%20Dashboard_files/smpd.png" width="60px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/smartcityproject/listSmartCityProjectDetails.do"><p style="text-align:center"><b>Smart Cities Mission </br> (SCM)&nbspProject&nbspDetails</b></p></a></div>
+  <div class="col-sm-2"><img src="SMARTRAJ%20-%20Dashboard_files/hriday.png" width="60px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/dashboard/hridayTotalReport.do"><p style="text-align:center"><b>Heritage Cities Development and Augmentation Yojna</b></p></a></div>
+  <div class="col-sm-2"> <img src="SMARTRAJ%20-%20Dashboard_files/pmay2.png" width="60px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/dashboard/housingForAllTotalReport.do"><p style="text-align:center"><b>Housing For All </b></p></a></div>
+<div class="col-sm-1"></div>
+</div>
+
+<div class=" mySlides3" style="position: relative;height:150px">
+
+   
+<div class="col-sm-1"></div>
+  <div class="col-sm-2"><img src="SMARTRAJ%20-%20Dashboard_files/anry.png" width="60px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/cityStatus/listCityStatusOfVans.do"><p style="text-align:center"><b>Annapurna Rasoi Yojana</b></p></a></div>
+  <div class="col-sm-2"><img src="SMARTRAJ%20-%20Dashboard_files/rudsico.png" width="60px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/amrutBasicInfo/getBasepage.do"><p style="text-align:center"><b>Scheme RUDSICO,LSG</b></p></a></div>
+  <div class="col-sm-2"><img src="SMARTRAJ%20-%20Dashboard_files/ppmsd.png" width="60px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/login.do"><p style="text-align:center"><b>PPMS Dashboard</b></p></a></div>
+  <div class="col-sm-2"> <img src="SMARTRAJ%20-%20Dashboard_files/sbd.png" width="60px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/dashboard/swachhBharatTotalReport.do"><p style="text-align:center"><b>Rajasthan State SBM Dashboard</b></p></a></div>
+  <div class="col-sm-2"><img src="SMARTRAJ%20-%20Dashboard_files/lhhl.png" width="60px"><a id="b" href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/dashboard/iHHLApplicationTotalReport.do"><p style="text-align:center"><b>IHHL Application Online</b></p></a></div>
+<div class="col-sm-1"></div>
+</div>
+
+
+</div>
+</div>
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+</script>
+
+<script>
+var myIndex1 = 0;
+carousel1();
+
+function carousel1() {
+    var i1;
+    var x1 = document.getElementsByClassName("mySlides1");
+    for (i1 = 0; i1 < x1.length; i1++) {
+       x1[i1].style.display = "none";  
+    }
+    myIndex1++;
+    if (myIndex1 > x1.length) {myIndex1 = 1}    
+    x1[myIndex1-1].style.display = "block";  
+    setTimeout(carousel1, 4000); // Change image every 2 seconds
+}
+</script>
+
+<script>
+var myIndex2 = 0;
+carousel2();
+
+function carousel2() {
+    var i2;
+    var x2 = document.getElementsByClassName("mySlides2");
+    for (i2 = 0; i2 < x2.length; i2++) {
+       x2[i2].style.display = "none";  
+    }
+    myIndex2++;
+    if (myIndex2 > x2.length) {myIndex2 = 1}    
+    x2[myIndex2-1].style.display = "block";  
+    setTimeout(carousel2, 4000); // Change image every 2 seconds
+}
+</script>
+
+<script>
+var myIndex3 = 0;
+carousel3();
+
+function carousel3() {
+    var i3;
+    var x3 = document.getElementsByClassName("mySlides3");
+    for (i3 = 0; i3 < x3.length; i3++) {
+       x3[i3].style.display = "none";  
+    }
+    myIndex3++;
+    if (myIndex3 > x3.length) {myIndex3 = 1}    
+    x3[myIndex3-1].style.display = "block";  
+    setTimeout(carousel3, 4000); // Change image every 2 seconds
+}
+</script>
+
+
+<div class="col-sm-12 container-fluid " style="max-width:100%;background-color:#3D3D3D;margin:0px 0px 0px 0px;color:white;float:right;text-align:center;">
+<div class="row">
+<p>
+<b>SmartRaj Copyright © 2016-17. All rights reserved.</b>
+<b>Powered By Govt. of Rajasthan</b>
+<p>
+<b></b></p><p class="visitorcopy"><b>You are visitor No : 2184</b></p> <p></p>
+<!--<b>Copyright© 2017, SMARTRAJ</b>-->
+ </p>
+	
+			
+			<!-- </div> -->
+			</div>
+		</div>
+		<script>
+		setContextRoot('/SMARTRAJDashboard');
+		setCurrentDate('11/05/2018');
+		</script>
+
+
+</body>
+</html>

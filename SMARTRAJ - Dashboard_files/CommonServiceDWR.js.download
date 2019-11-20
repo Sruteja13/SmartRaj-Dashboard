@@ -1,0 +1,184 @@
+if (typeof dwr == 'undefined' || dwr.engine == undefined) throw new Error('You must include DWR engine before including this file');
+
+(function() {
+  if (dwr.engine._getObject("CommonServiceDWR") == undefined) {
+    var p;
+    
+    p = {};
+
+    /**
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getAllBuildingPermission = function(callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getAllBuildingPermission', arguments);
+    };
+
+    /**
+     * @param {long} p0 a param
+     * @param {long} p1 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getPrincipalOnMileStone = function(p0, p1, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getPrincipalOnMileStone', arguments);
+    };
+
+    /**
+     * @param {long} p0 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getTownOnProject = function(p0, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getTownOnProject', arguments);
+    };
+
+    /**
+     * @param {long} p0 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getSectorOnTown = function(p0, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getSectorOnTown', arguments);
+    };
+
+    /**
+     * @param {long} p0 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getSubProjectOnSector = function(p0, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getSubProjectOnSector', arguments);
+    };
+
+    /**
+     * @param {long} p0 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getFileMasterOnSector = function(p0, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getFileMasterOnSector', arguments);
+    };
+
+    /**
+     * @param {class java.lang.String} p0 a param
+     * @param {long} p1 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.deleteFileDocument = function(p0, p1, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'deleteFileDocument', arguments);
+    };
+
+    /**
+     * @param {class java.lang.String} p0 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getAuditTrailEntityPropertyList = function(p0, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getAuditTrailEntityPropertyList', arguments);
+    };
+
+    /**
+     * @param {class java.lang.String} p0 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getDictionaryValue = function(p0, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getDictionaryValue', arguments);
+    };
+
+    /**
+     * @param {class java.lang.String} p0 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getZoneMasterList = function(p0, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getZoneMasterList', arguments);
+    };
+
+    /**
+     * @param {class java.lang.String} p0 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getWardMasterList = function(p0, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getWardMasterList', arguments);
+    };
+
+    /**
+     * @param {class [Ljava.lang.String;} p0 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getTranslatedValue = function(p0, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getTranslatedValue', arguments);
+    };
+
+    /**
+     * @param {class java.lang.String} p0 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getBankBranchList = function(p0, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getBankBranchList', arguments);
+    };
+
+    /**
+     * @param {class java.lang.String} p0 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getCollectionCenterList = function(p0, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getCollectionCenterList', arguments);
+    };
+
+    /**
+     * @param {long} p0 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getCollectionCenterOnWard = function(p0, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getCollectionCenterOnWard', arguments);
+    };
+
+    /**
+     * @param {class java.lang.String} p0 a param
+     * @param {long} p1 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.deleteCheckListFileDocument = function(p0, p1, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'deleteCheckListFileDocument', arguments);
+    };
+
+    /**
+     * @param {class java.lang.String} p0 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getChallanOnApplicationNumber = function(p0, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getChallanOnApplicationNumber', arguments);
+    };
+
+    /**
+     * @param {class java.lang.String} p0 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getChallanId = function(p0, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getChallanId', arguments);
+    };
+
+    /**
+     * @param {class java.lang.String} p0 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.getChallanDetailsById = function(p0, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'getChallanDetailsById', arguments);
+    };
+
+    /**
+     * @param {class java.lang.String} p0 a param
+     * @param {long} p1 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.deleteDmsDocumentCheckList = function(p0, p1, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'deleteDmsDocumentCheckList', arguments);
+    };
+
+    /**
+     * @param {class java.lang.String} p0 a param
+     * @param {long} p1 a param
+     * @param {function|Object} callback callback function or options object
+     */
+    p.deleteDmsDocument = function(p0, p1, callback) {
+      return dwr.engine._execute(p._path, 'CommonServiceDWR', 'deleteDmsDocument', arguments);
+    };
+    
+    dwr.engine._setObject("CommonServiceDWR", p);
+  }
+})();
+

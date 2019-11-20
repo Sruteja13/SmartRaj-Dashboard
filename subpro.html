@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SMARTRAJ - Dashboard</title>
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<!-- <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+ --><meta name="FORMAT" content="application/json">
+<meta name="CHARSET" content="UTF-8">
+<meta name="DOCUMENTLANGUAGECODE" content="en">
+<meta name="DOCUMENTCOUNTRYCODE" content="us">
+<meta name="DC.LANGUAGE" scheme="rfc1766" content="en-us">
+<meta name="COPYRIGHT" content="Copyright (c) 2016 for Mars Telecom Systems Pvt Ltd">
+<meta name="SECURITY" content="Public">
+<meta name="ROBOTS" content="index,follow">
+<meta name="GOOGLEBOT" content="index,follow">
+<meta name="Author" content="Mars Telecom Systems Private Ltd">
+<meta name="REFERER" content="ORIGIN">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/styles.css">
+<script type="text/javascript" language="javascript" src="./SMARTRAJ - Dashboard_files/utils.js.download"></script>
+<script type="text/javascript" src="./SMARTRAJ - Dashboard_files/jquery-3.2.1.js.download"></script>
+<script type="text/javascript" src="./SMARTRAJ - Dashboard_files/bootstrap.min.js.download"></script>
+<script type="text/javascript" src="./SMARTRAJ - Dashboard_files/jquery-ui-1.8.2.custom.min.js.download"></script>
+<script type="text/javascript" src="./SMARTRAJ - Dashboard_files/jquery.uploadify.v2.1.0.min.js.download"></script>
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/bootstrap.min.css>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/demos.css">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/ui.core.css">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/ui.theme.css">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/ui.tabs.css">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/ui.dialog.css">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/ui.autocomplete.css">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/smartRajDashboard.css">
+<link rel="stylesheet" type="text/css" href="./SMARTRAJ - Dashboard_files/dashboardSideNav.css">
+<link href="css/style.css" rel="stylesheet">
+<script src="./SMARTRAJ - Dashboard_files/engine.js.download"></script>
+<script src="./SMARTRAJ - Dashboard_files/util.js.download"></script>
+<script type="text/javascript" src="./SMARTRAJ - Dashboard_files/CommonServiceDWR.js.download"></script>
+<style> 
+<!-- .homeLnk{ -->
+<!-- background:url(../images/home.png) no-repeat left 6px; -->
+<!-- line-height:32px;display:block;font-size:1.1em;font-weight:bold;padding-left:22px;} -->
+<!-- .chngPwdLnk{background:url(../images/change_pass.png) no-repeat left 7px;height:30px;line-height:32px;display:block;font-size:1.1em;color:#000;font-weight:bold;padding-left:22px;margin-right:18px;} -->
+<!-- .signoutLnk{background:url(../images/logout.png) no-repeat left 7px;height:30px;line-height:32px;display:block;font-size:1.1em;color:#000;font-weight:bold;padding-left:22px;margin-right:18px;} -->
+.btn {
+width:100%;background-color:#0297be;
+    border: none;
+    color: white;
+    padding: 4px 1px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#btn1,#btn2,#btn3{
+	width:90%;
+	background-color:#44cef2;
+	display:none;
+    border: none;
+    color: white;
+    padding: 4px 1px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#btn1:hover,#btn2:hover,#btn3:hover{
+background-color:white;
+color:black;
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+
+.button { 
+     z-index: -1000;
+    background-color:#f2f2f2; 
+	background-image:;
+    border: none;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+	border-radius:10px;
+}
+.button span{
+ cursor: pointer;
+ display: inline-block;
+ position: relative;
+ transition: 0.5s;
+ }
+ .button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  }
+ .button:hover span {
+  padding-right: 25px;
+ }
+ .button:hover span:after {
+ opacity: 1;
+ right: 0;
+ }
+ .button1:hover  {
+ background-color: gray;
+ color: white;
+ }
+
+.topbar{
+float:right;
+}
+
+#d{
+
+    background-color: #cccccc;
+    background-image: linear-gradient(#f2f2f2,#f2f2f2);
+}
+
+
+
+.modal1 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal1-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close1 {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+<style type="text/css">
+.form-style-5{
+    max-width: 500px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    margin: 10px auto;
+    padding: 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form-style-5 fieldset{
+    border: none;
+}
+.form-style-5 legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.form-style-5 label {
+    display: block;
+    margin-bottom: 8px;
+}
+.form-style-5 input[type="text"],
+.form-style-5 input[type="date"],
+.form-style-5 input[type="datetime"],
+.form-style-5 input[type="email"],
+.form-style-5 input[type="number"],
+.form-style-5 input[type="search"],
+.form-style-5 input[type="time"],
+.form-style-5 input[type="url"],
+.form-style-5 textarea,
+.form-style-5 select {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    background-color: #e8eeef;
+    color:#8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+    
+}
+.form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="date"]:focus,
+.form-style-5 input[type="datetime"]:focus,
+.form-style-5 input[type="email"]:focus,
+.form-style-5 input[type="number"]:focus,
+.form-style-5 input[type="search"]:focus,
+.form-style-5 input[type="time"]:focus,
+.form-style-5 input[type="url"]:focus,
+.form-style-5 textarea:focus,
+.form-style-5 select:focus{
+    background: #d2d9dd;
+}
+.form-style-5 select{
+    -webkit-appearance: menulist-button;
+    height:35px;
+}
+.form-style-5 .number {
+    background: #1abc9c;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+
+.form-style-5 input[type="submit"],
+.form-style-5 input[type="button"]
+{
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #1abc9c;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #16a085;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover
+{
+    background: #109177;
+}
+</style>
+</style>
+<body onload="myFunction2()">
+
+<d   iv id="myModal1" class="modal1" >
+<
+  <!-- Modal content -->
+  <div class="modal1-content" style="width:50%">
+<div class="form-style-5" >
+<form>
+<fieldset>
+<legend><span class="number">1</span> Candidate Info</legend>
+<input type="text" name="field1" placeholder="Your Name *">
+<input type="email" name="field2" placeholder="Your Email *">
+<textarea name="field3" placeholder="About yourself"></textarea>
+<label for="job">Sector</label>
+<select id="job" name="field4">
+<optgroup label="Sector">
+  <option value="fishkeeping">Fishkeeping</option>
+  <option value="reading">Reading</option>
+</optgroup>
+</select>      
+</fieldset>
+<fieldset>
+<legend><span class="number">2</span> Additional Info</legend>
+<textarea name="field3" placeholder="About Your School"></textarea>
+</fieldset>
+<input type="submit" value="Apply" />	
+</form>
+</div>
+     </div>
+  </div>
+
+<div  class="smt-home" style="background-color:black">
+
+ <a href="https://www.smartrajapp.urban.rajasthan.gov.in/"><button type="button"  class="topbar button button1"><b>sign Out</b></button></a>
+   
+   <a href="https://www.smartrajapp.urban.rajasthan.gov.in/"><button type="button"  class="topbar button button1"><b>Change Password</b></button></a>
+    <a href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/home.do"><button type="button" class="topbar button button1"><b>Home</b></button></a>
+  
+					
+					
+					
+					
+					
+ 
+  
+ 
+ <!--  <a href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/home.do"></a><img src="./SMARTRAJ - Dashboard_files/title.jpg" >-->
+ <div class="main-header clearfix" id="d">
+ <div class="page-title">
+ 					<div class="landingPageLogo"><a href="https://www.smartrajapp.urban.rajasthan.gov.in/SMARTRAJDashboard/home.do"><img src="SMARTRAJ%20-%20Dashboard_files/Logo.png" style="margin-top: 16px"></a> </div>				
+				</div><!-- /page-title -->
+				<ul class="page-stats-left">
+			    	<li style="margin: 0 %">
+			    		<div class="value">			    			
+			    			<b id="currentVisitor" style="font-weight: bold;font-size: 24px" >Government of Rajasthan</b>
+			    			<b style="font-weight: bold;font-size: 20px;text-align: center;">Dept. of Local Self Government</b>
+			    			<b style="font-weight: bold;font-size: 15px;text-align: center;">SmartRaj Dashboard</b>
+			    		</div>						
+			    	</li>
+			    	
+			    </ul>
+				</div>
+				
+</div>
+<div style="height:30px;width:100%;text-align:center;font-size:20px;background-color:#3fb0ac;color:white">
+<b>Project Performance Monitoring System (PPMS)</b>
+
+</div>
+<div class="col-sm-12">
+<div class="col-sm-2" style="background-color:#e1e1e1;height:400px;margin:0;float:left">
+
+<!-- <div class="sidenav"> -->
+<!-- </br> -->
+<!-- </br> -->
+<!-- </br> -->
+<!-- </br> -->
+<!-- </br> -->
+<!-- </br> -->
+<!-- </br> -->
+<!-- </br> -->
+  <!-- <a href="#about">About</a> -->
+  <!-- <a href="#services">Services</a> -->
+  <!-- <a href="#clients">Clients</a> -->
+  <!-- <a href="#contact">Contact</a> -->
+<!-- </div> -->
+
+
+
+
+
+
+
+<button class="btn" onclick="myFunction()" style="">Select Sub Project</button>
+
+<button id="btn1"  style="">Select Sub Project</button>
+
+<button class="btn" onclick="myFunction1()" style="">Select Sub Project</button>
+
+<button id="btn2"  style="">sd</button>
+<button id="btn3"  style="">Select Sub Project</button>
+<button id="btn2"  style="">Select Sub Project</button>
+<button id="btn2"  style="">Select Sub Project</button>
+<button id="btn2"  style="">Select Sub Project</button>
+<button id="btn2"  style="">Select Sub Project</button>
+
+
+</div>
+<div class="col-sm-10 main">
+
+
+</div>
+</div>
+<div class="col-sm-12 container-fluid " style="max-width:100%;background-color:#3fb0ac;margin:0px 0px 0px 0px;color:white;float:right;text-align:center;">
+<div class="row">
+<p>
+<b>SmartRaj Copyright © 2016-17. All rights reserved.</b>
+<b>Powered By Govt. of Rajasthan</b>
+<p>
+<b></b></p><p class="visitorcopy"><b>You are visitor No : 2184</b></p> <p></p>
+<!--<b>Copyright© 2017, SMARTRAJ</b>-->
+ </p>
+	
+			
+			<!-- </div> -->
+			</div>
+		</div>
+<script>
+function myFunction() {
+    var x = document.getElementById("btn1");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+</script>
+<script>
+function myFunction1() {
+    var x = document.getElementById("btn2");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+
+ var y = document.getElementById("btn3");
+    if (y.style.display === "block") {
+        y.style.display = "none";
+    } else {
+        y.style.display = "block";
+    }
+}
+</script>
+
+<script>
+function myFunction2() {
+var modal1 = document.getElementById('myModal1');
+
+// Get the button that opens the modal
+var btn1 = document.getElementById("myBtn");
+ modal1.style.display = "block";
+// Get the <span> element that closes the modal
+var span1 = document.getElementsByClassName("close1")[0];
+ 
+// When the user clicks the button, open the modal 
+btn1.onclick = function() {
+    modal1.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span1.onclick = function() {
+    modal1.style.display = "none";
+}
+
+
+   
+}
+</script>
+</body>
+</html>
